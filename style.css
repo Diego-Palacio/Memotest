@@ -42,14 +42,14 @@ div{
 @media (max-width: 512px) {
  
   div{
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
   }
 
   .contenedor{
     display:grid;
       /*-grid-template-columns:repeat(3,0fr);*/
-      grid-template-columns: auto auto auto;
+      grid-template-columns: auto auto;
      grid-gap: 12px;
      /*justify-content: center;*/
       
