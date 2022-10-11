@@ -3,37 +3,22 @@ let num=10;
 let img1= document.getElementById("img1");
 let divs= document.querySelectorAll(".a");
    
-    //  img1.addEventListener("click",(e)=>{
 
-    //     divs.forEach(element => {
-    //          element.style.backgroundColor="red";
-    //      });
 
-    //     //img1.style.backgroundColor="red";
-    //      //cartasDadasVueltas+1;
-    //      setTimeout(darVueltaCarta, 3000);
-    
-    //  });
-
-let imagenes=["messi1.jpg","messi2.jpg","ronaldo1.jpg","ronaldo2.jpg","maradona1.jpg","maradona2.jpg", "romagnoli1.jpg", "romagnoli2.jpg","ronaldino1.jpg","ronaldino2.jpg"]
+let imagenes=["imagenes/messi1.jpg","imagenes/messi2.jpg","imagenes/ronaldo1.jpg","imagenes/ronaldo2.jpg","imagenes/maradona1.jpg","imagenes/maradona2.jpg", "imagenes/romagnoli1.jpg", "imagenes/romagnoli2.jpg","imagenes/ronaldino1.jpg","imagenes/ronaldino2.jpg"]
 let imagenesSeleccionadas=[]
-let imagenesRandom=[]
 
-let acertadas=[]
 
-    
 divs.forEach(el=>{
     el.style.opacity="0"
-    console.log("tapando")
 })
-
 
 
 divs.forEach(el=>{
 
     let random= Math.floor(Math.random() * num);
     el.setAttribute("src",imagenes[random])
-    imagenesRandom.push(imagenes[random])
+   
     imagenes = imagenes.filter((item) => item !== imagenes[random])
     num--;
     
@@ -42,11 +27,9 @@ divs.forEach(el=>{
         imagenesSeleccionadas.push(el.getAttribute("src"))
         el.style.opacity="1"
         cartasDadasVueltas++;
-        console.log("dando vuelta "+ el.getAttribute("src"))
 
         if(cartasDadasVueltas==2){
-            if( (imagenesSeleccionadas.includes("messi1.jpg") && imagenesSeleccionadas.includes("messi2.jpg")) || (imagenesSeleccionadas.includes("maradona1.jpg") && imagenesSeleccionadas.includes("maradona2.jpg")) ||  (imagenesSeleccionadas.includes("romagnoli1.jpg") && imagenesSeleccionadas.includes("romagnoli2.jpg")) || (imagenesSeleccionadas.includes("ronaldo1.jpg") && imagenesSeleccionadas.includes("ronaldo2.jpg")) || (imagenesSeleccionadas.includes("ronaldino1.jpg") && imagenesSeleccionadas.includes("ronaldino2.jpg")) ){
-               console.log("gano")
+            if( (imagenesSeleccionadas.includes("imagenes/messi1.jpg") && imagenesSeleccionadas.includes("imagenes/messi2.jpg")) || (imagenesSeleccionadas.includes("imagenes/maradona1.jpg") && imagenesSeleccionadas.includes("imagenes/maradona2.jpg")) ||  (imagenesSeleccionadas.includes("imagenes/romagnoli1.jpg") && imagenesSeleccionadas.includes("imagenes/romagnoli2.jpg")) || (imagenesSeleccionadas.includes("imagenes/ronaldo1.jpg") && imagenesSeleccionadas.includes("imagenes/ronaldo2.jpg")) || (imagenesSeleccionadas.includes("imagenes/ronaldino1.jpg") && imagenesSeleccionadas.includes("imagenes/ronaldino2.jpg")) ){
                cartasDadasVueltas=0;
                imagenesSeleccionadas=[]
                acertadas.push(1)
@@ -58,8 +41,6 @@ divs.forEach(el=>{
             }
             else{
     
-              console.log("las imagenes fueron"+imagenesSeleccionadas)
-              
                divs.forEach(img=>{
                   if(imagenesSeleccionadas.includes(img.getAttribute("src"))){
                      
