@@ -42,8 +42,8 @@ div{
 @media (max-width: 512px) {
  
   div{
-    width: 80px;
-    height: 80px;
+    width: 110px;
+    height: 110px;
   }
 
   .contenedor{
