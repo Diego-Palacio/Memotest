@@ -1,0 +1,32 @@
+img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+div{
+    border:1px solid black;
+    margin:auto;
+    width:250px;
+  	height:250px;
+}
+
+ .contenedor{
+	display:grid;
+  	/*-grid-template-columns:repeat(3,0fr);*/
+    grid-template-columns: repeat(auto-fill,minmax(min(100%,16rem),1fr));
+   grid-gap: 10px;
+  
+   /*justify-content: center;*/
+    
+} 
+
+
+
+
+
+
+
+
+
+
